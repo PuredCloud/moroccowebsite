@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    margin-bottom: 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #b71c1c;
+}
+
+.foodgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+    background-color: #e0e0e0;
+    background-image: url('../PHOTOS/foodbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.foodcard {
+    position: relative;
+    padding-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.foodcard:hover {
+    transform: translateY(-10px);
+}
+
+.foodimg {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foodimg img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.foodinfo {
+    padding: 20px;
+    text-align: center;
+}
+
+.foodinfo h3 {
+    font-size: 24px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.foodinfo p {
+    color: #3c3a3a;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    height: 80px; 
+    overflow: hidden;
+}
+
+.learnmore {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .foodgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .foodgrid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+}
